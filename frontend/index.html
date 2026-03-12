@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Emotion Detection System – Detect facial emotions instantly using AI and your webcam or a photo." />
+  <title>Emotion Detection System</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body class="home-page">
+
+  <!-- ─── Background Orbs ─────────────────────────────────── -->
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- ─── Navigation ─────────────────────────────────────── -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="nav-icon">🧠</span>
+      <span class="nav-title">EmotiVision</span>
+    </div>
+    <a href="detect.html" class="nav-cta">Launch App →</a>
+  </nav>
+
+  <!-- ─── Hero Section ───────────────────────────────────── -->
+  <main class="hero">
+    <div class="hero-badge">✨ Powered by Deep Learning</div>
+
+    <h1 class="hero-title">
+      Read Emotions<br />
+      <span class="gradient-text">Instantly with AI</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      Upload a photo or open your webcam. Our neural network detects facial
+      emotions in real time — Happy, Sad, Angry, Surprised &amp; more.
+    </p>
+
+    <div class="hero-actions">
+      <a href="detect.html" class="btn btn-primary" id="start-btn">
+        <span>Start Emotion Detection</span>
+        <span class="btn-arrow">→</span>
+      </a>
+      <a href="#features" class="btn btn-ghost">Learn More</a>
+    </div>
+
+    <!-- Emotion pill previews -->
+    <div class="emotion-pills" aria-label="Supported emotions">
+      <span class="pill">😊 Happy</span>
+      <span class="pill">😢 Sad</span>
+      <span class="pill">😠 Angry</span>
+      <span class="pill">😲 Surprised</span>
+      <span class="pill">😨 Fear</span>
+      <span class="pill">😐 Neutral</span>
+      <span class="pill">🤢 Disgust</span>
+    </div>
+  </main>
+
+  <!-- ─── Features Section ─────────────────────────────────── -->
+  <section class="features" id="features">
+    <h2 class="section-title">How It <span class="gradient-text">Works</span></h2>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">📸</div>
+        <h3>Upload or Capture</h3>
+        <p>Upload any image from your device or capture one live from your webcam with a single click.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🤖</div>
+        <h3>AI Analysis</h3>
+        <p>Our Keras/TensorFlow model runs facial recognition and analyses micro-expressions in milliseconds.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>Instant Results</h3>
+        <p>Get a complete emotion breakdown with confidence scores and visual indicators returned immediately.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Stats Section ─────────────────────────────────── -->
+  <section class="stats-section">
+    <div class="stat-item"><span class="stat-num">7</span><span class="stat-label">Emotions Detected</span></div>
+    <div class="stat-item"><span class="stat-num">48px</span><span class="stat-label">Face-focused Input</span></div>
+    <div class="stat-item"><span class="stat-num">~ms</span><span class="stat-label">Prediction Speed</span></div>
+    <div class="stat-item"><span class="stat-num">FER</span><span class="stat-label">2013 Dataset</span></div>
+  </section>
+
+  <!-- ─── Footer ──────────────────────────────────────────── -->
+  <footer class="footer">
+    <span>🧠 EmotiVision &mdash; Built with Python, Flask &amp; TensorFlow</span>
+  </footer>
+
+  <script>
+    // Animate pills on load
+    document.querySelectorAll('.pill').forEach((p, i) => {
+      p.style.animationDelay = `${i * 0.08}s`;
+    });
+  </script>
+</body>
+</html>
